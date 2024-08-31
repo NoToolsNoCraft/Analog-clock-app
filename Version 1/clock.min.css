@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent overflow for small screens */
+}
+
+#time {
+    font-size: 2.5em; /* Increased font size for time */
+    margin-bottom: 20px; /* Space between time and clock */
+}
+
+.analog_clock_codexen {
+    width: 70vw; /* Base width */
+    height: 70vw; /* Maintain aspect ratio */
+    max-width: 400px; /* Maximum width for desktop */
+    max-height: 400px; /* Maximum height for desktop */
+    background-color: #fcf7cb;
+    border: 4px solid #5e5e5f;
+    border-radius: 50%;
+    box-shadow: 0 0 16px 0 #ececec;
+    position: relative;
+    font-size: 20px; /* Increased font size for clock numbers */
+    margin: 0 auto; /* Center the clock horizontally */
+}
+
+/* Hand styles remain unchanged */
+.analog_clock_codexen #sec-hand {
+    width: 2px; /* Increased width for the second hand */
+    height: 50%; /* Keep the same height */
+    background-color: #ff0000;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+.analog_clock_codexen #min-hand {
+    width: 4px; /* Increased width for the minute hand */
+    height: 40%; /* Keep the same height */
+    background-color: #000;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top: 18%;
+    left: calc(50% - 2px); /* Adjust left position for larger width */
+}
+.analog_clock_codexen #hr-hand {
+    width: 4px; /* Increased width for the hour hand */
+    height: 30%; /* Increased height for better visibility */
+    background-color: #000;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top: 25%; /* Adjusted top position for better appearance */
+    left: calc(50% - 2px); /* Adjust left position for larger width */
+}
+
+/* Enhanced number styles */
+.analog_clock_codexen .num {
+    height: 100%;
+    position: absolute;
+    left: calc(50% - .5em);
+    left: 46%;
+    font-weight: bold; /* Make the numbers bold */
+    font-size: 1.5em;  /* Adjust font size if needed */
+    color: #000;       /* Set a color for the numbers */
+}
+
+.analog_clock_codexen .num div {
+    width: 1.5em; /* Increased width for clock numbers */
+    line-height: 2em; /* Keep the same line height */
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Number rotation styles remain unchanged */
+.analog_clock_codexen .num1 { transform: rotate(30deg); }
+.analog_clock_codexen .num1 div { transform: rotate(-30deg); }
+.analog_clock_codexen .num2 { transform: rotate(60deg); }
+.analog_clock_codexen .num2 div { transform: rotate(-60deg); }
+.analog_clock_codexen .num3 { transform: rotate(90deg); }
+.analog_clock_codexen .num3 div { transform: rotate(-90deg); }
+.analog_clock_codexen .num4 { transform: rotate(120deg); }
+.analog_clock_codexen .num4 div { transform: rotate(-120deg); }
+.analog_clock_codexen .num5 { transform: rotate(150deg); }
+.analog_clock_codexen .num5 div { transform: rotate(-150deg); }
+.analog_clock_codexen .num6 { transform: rotate(180deg); }
+.analog_clock_codexen .num6 div { transform: rotate(-180deg); }
+.analog_clock_codexen .num7 { transform: rotate(210deg); }
+.analog_clock_codexen .num7 div { transform: rotate(-210deg); }
+.analog_clock_codexen .num8 { transform: rotate(240deg); }
+.analog_clock_codexen .num8 div { transform: rotate(-240deg); }
+.analog_clock_codexen .num9 { transform: rotate(270deg); }
+.analog_clock_codexen .num9 div { transform: rotate(-270deg); }
+.analog_clock_codexen .num10 { transform: rotate(300deg); }
+.analog_clock_codexen .num10 div { transform: rotate(-300deg); }
+.analog_clock_codexen .num11 { transform: rotate(330deg); }
+.analog_clock_codexen .num11 div { transform: rotate(-330deg); }
+.analog_clock_codexen .num12 { transform: rotate(0); }
+.analog_clock_codexen .num12 div { transform: rotate(0); }
+
+/* Media query for larger clock on mobile devices */
+@media (max-width: 900px) {
+    .analog_clock_codexen {
+        width: 85vw; /* Increase width to better fit mobile screens */
+        height: 85vw; /* Maintain aspect ratio */
+        max-width: 600px; /* Maximum width for mobile */
+        max-height: 600px; /* Maximum height for mobile */
+        margin: auto; /* Center the clock horizontally */
+    }
+
+    #time {
+        font-size: 3em; /* Larger font size for time */
+    }
+}
+
