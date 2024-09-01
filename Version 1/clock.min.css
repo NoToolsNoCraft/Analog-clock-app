@@ -111,7 +111,15 @@ body {
         max-height: 600px; /* Maximum height for mobile */
         margin: auto; /* Center the clock horizontally */
     }
-
+    .analog_clock_codexen .num {
+        height: 100%;
+        position: absolute;
+        left: calc(50% - .5em);
+        left: 44%;
+        font-weight: bold; /* Make the numbers bold */
+        font-size: 1.5em;  /* Adjust font size if needed */
+        color: #000;       /* Set a color for the numbers */
+    }
     #time {
         font-size: 3em; /* Larger font size for time */
     }
